@@ -17,8 +17,7 @@ public class ProyectoFinalClient {
      */
     public static void main(String[] args) {
         var api= new UsuarioAPI();
-        var user= new Usuario(1, "admin", "1234");
-        System.out.println(api.registrarUsuario(user));
+        var log= new login().registro();
         System.out.println(api.getUsuario("admin", "1234"));
     }
     
