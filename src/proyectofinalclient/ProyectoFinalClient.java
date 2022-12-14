@@ -16,8 +16,9 @@ public class ProyectoFinalClient {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        var log= new login();
+        log.logmenu();
         var api= new UsuarioAPI();
-        var log= new login().registro();
         System.out.println(api.getUsuario("admin", "1234"));
     }
     
