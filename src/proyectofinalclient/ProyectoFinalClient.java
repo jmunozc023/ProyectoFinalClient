@@ -4,8 +4,6 @@
  */
 package proyectofinalclient;
 
-import Conexion.UsuarioAPI;
-import Pojo.Usuario;
 /**
  *
  * @author josep
@@ -16,10 +14,9 @@ public class ProyectoFinalClient {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        var log= new login();
+        var log= new login();//Creacion de una instancia para el logeo y del resto de las partes del menu
         log.logmenu();
-        var api= new UsuarioAPI();
-        System.out.println(api.getUsuario("admin", "1234"));
+        
     }
     
 }

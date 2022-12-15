@@ -8,7 +8,7 @@ package Pojo;
  *
  * @author josep
  */
-public enum Categorias {
+public enum Categorias { //Enum utilizado para crear las categorias necesarias del Producto
     tarjMad("Tarjeta Madre"),memRam("Memoria RAM"),moni("Monitor"), fPoder("Fuente de Poder"),
     dDuro("Disco Duro"), mouse("Mouse"), teclado("teclado");
     private final String articulo;

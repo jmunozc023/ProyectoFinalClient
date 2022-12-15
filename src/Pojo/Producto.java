@@ -8,11 +8,12 @@ package Pojo;
  *
  * @author josep
  */
-public class Producto extends productoBase{
+public class Producto extends productoBase{ //Clase de implementacion del Producto
+    //declaracion de variables
     private String nombreUsuario;
     private String categoria;
-
-    public Producto(String usuarioActual, Categorias tarjMad, int par, String art, int option1, int option11) {
+    //construcor de la clase vacio y de la herencia 
+    public Producto() {
     }
 
     public Producto(String nombreUsuario, String categoria, int id, String articulo, int costoUnitario, int cantidad) {
@@ -20,7 +21,7 @@ public class Producto extends productoBase{
         this.nombreUsuario = nombreUsuario;
         this.categoria = categoria;
     }
-
+    // Getters y Setters junto con los Overrides correspondientes
     public String getNombreUsuario() {
         return nombreUsuario;
     }

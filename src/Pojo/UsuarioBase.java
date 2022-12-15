@@ -8,11 +8,13 @@ package Pojo;
  *
  * @author josep
  */
-public abstract class UsuarioBase {
+public abstract class UsuarioBase { //Clase Abstract para el usuario
+    //declaracion de las variables
     private int id;
     private String nombreUsuario;
     private String password;
-
+    
+    //constructores vacio y de la clase
     public UsuarioBase() {
     }
 
@@ -21,7 +23,7 @@ public abstract class UsuarioBase {
         this.nombreUsuario = nombreUsuario;
         this.password = password;
     }
-
+    //Getter y Setter
     public int getId() {
         return id;
     }

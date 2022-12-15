@@ -8,8 +8,8 @@ package Pojo;
  *
  * @author josep
  */
-public class Usuario extends UsuarioBase{
-    
+public class Usuario extends UsuarioBase{ //Implementacion de la clase Usuario, heredando del abstract
+    //constructores vacios y de la herencia, junto con los Override
     public Usuario() {
     }
 

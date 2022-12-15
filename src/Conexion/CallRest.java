@@ -16,8 +16,9 @@ import java.net.URL;
  *
  * @author josep
  */
+//Clase que nos ayudara a tener una conexion con el Servidor a traves de los servicios REST
 public class CallRest {
-
+    //Implementacion y validacion de la conexion con el Servidor para el metodo GET
     public String get(final String url) throws MalformedURLException, IOException {
         URL obj = new URL(url);
         HttpURLConnection httpConnection = (HttpURLConnection) obj.openConnection();
@@ -37,6 +38,7 @@ public class CallRest {
         httpConnection.disconnect();
         return respuestaCompleta;
     }
+    //Implementacion y validacion de la conexion con el Servidor para el metodo POST
     public String post(final String url, final String jsonData)throws MalformedURLException, IOException {
         HttpURLConnection httpConnection= (HttpURLConnection)new URL(url).openConnection();
         httpConnection.setDoOutput(true);
