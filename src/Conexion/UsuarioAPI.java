@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  */
 public class UsuarioAPI { //API para generar las conexiones entre el cliente y el servidor REST
     private CallRest rest;
-    private String Url= "http://DESKTOP-TPILMOU:8080/webresources/login";
+    private String Url= "http://DESKTOP-A4A90A2:8080/webresources/login";
     
     public UsuarioAPI(){
         rest= new CallRest();

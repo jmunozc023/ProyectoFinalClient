@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  */
 public class ProductoAPI { //API para generar las conexiones entre el cliente y el servidor REST
     private CallRest rest;
-    private String Url= "http://DESKTOP-TPILMOU:8080/webresources/productos"; //Variable del URL *** importante modificarla dependiendo de la computadora que se este usando
+    private String Url= "http://DESKTOP-A4A90A2:8080/webresources/productos"; //Variable del URL *** importante modificarla dependiendo de la computadora que se este usando
     
     public ProductoAPI(){
         rest= new CallRest();
