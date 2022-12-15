@@ -24,12 +24,12 @@ public class facturacion {
 
     public void facmenu() {
         var option = 0;
-        while (option != 3) {
+        while (option != 8) {
             System.out.println("*********** Bienvenido a CompuSourse***********");
             System.out.println("*                Menu principal               *");
             System.out.println("* 1. Compra                                   *");
             System.out.println("* 2. Facturacion                              *");
-            System.out.println("* 3. Salir                                    *");
+            System.out.println("* 8. Salir                                    *");
             System.out.println("***********************************************");
             System.out.print("Seleccione una opcion: ");
             option = scanner1.nextInt();
@@ -56,10 +56,81 @@ public class facturacion {
                             var price= scanner.nextInt();
                             System.out.print("Ingrese la cantidad: ");
                             var cant= scanner.nextInt();
-                            var U= login.usuarioActual.toString();
+                            var U= login.usuarioActual;
                             var ca= Categorias.tarjMad.toString();
                             var ingreso= new Producto(U,ca , 0, art, price, cant);
-                            /*var ingreso= new Producto(login.usuarioActual, Categorias.tarjMad, 0, art, price, cant);*/
+                            api.ingresarProducto(ingreso);
+                            break;
+                        case 2:
+                            System.out.print("Ingrese la marca y modelo de la Memoria RAM: ");
+                            art= scanner.next();
+                            System.out.print("Ingrese el precio: ");
+                            price= scanner.nextInt();
+                            System.out.print("Ingrese la cantidad: ");
+                            cant= scanner.nextInt();
+                            U= login.usuarioActual;
+                            ca= Categorias.memRam.toString();
+                            ingreso= new Producto(U,ca , 0, art, price, cant);
+                            api.ingresarProducto(ingreso);
+                            break;
+                        case 3:
+                            System.out.print("Ingrese la marca y modelo del Monitor: ");
+                            art= scanner.next();
+                            System.out.print("Ingrese el precio: ");
+                            price= scanner.nextInt();
+                            System.out.print("Ingrese la cantidad: ");
+                            cant= scanner.nextInt();
+                            U= login.usuarioActual;
+                            ca= Categorias.moni.toString();
+                            ingreso= new Producto(U,ca , 0, art, price, cant);
+                            api.ingresarProducto(ingreso);
+                            break;
+                        case 4:
+                            System.out.print("Ingrese la marca y modelo de la Fuente de poder: ");
+                            art= scanner.next();
+                            System.out.print("Ingrese el precio: ");
+                            price= scanner.nextInt();
+                            System.out.print("Ingrese la cantidad: ");
+                            cant= scanner.nextInt();
+                            U= login.usuarioActual;
+                            ca= Categorias.fPoder.toString();
+                            ingreso= new Producto(U,ca , 0, art, price, cant);
+                            api.ingresarProducto(ingreso);
+                            break;
+                        case 5:
+                            System.out.print("Ingrese la marca y modelo del Disco Duro: ");
+                            art= scanner.next();
+                            System.out.print("Ingrese el precio: ");
+                            price= scanner.nextInt();
+                            System.out.print("Ingrese la cantidad: ");
+                            cant= scanner.nextInt();
+                            U= login.usuarioActual;
+                            ca= Categorias.dDuro.toString();
+                            ingreso= new Producto(U,ca , 0, art, price, cant);
+                            api.ingresarProducto(ingreso);
+                            break;
+                        case 6:
+                            System.out.print("Ingrese la marca y modelo del Mouse: ");
+                            art= scanner.next();
+                            System.out.print("Ingrese el precio: ");
+                            price= scanner.nextInt();
+                            System.out.print("Ingrese la cantidad: ");
+                            cant= scanner.nextInt();
+                            U= login.usuarioActual;
+                            ca= Categorias.mouse.toString();
+                            ingreso= new Producto(U,ca , 0, art, price, cant);
+                            api.ingresarProducto(ingreso);
+                            break;
+                        case 7:
+                            System.out.print("Ingrese la marca y modelo del Teclado: ");
+                            art= scanner.next();
+                            System.out.print("Ingrese el precio: ");
+                            price= scanner.nextInt();
+                            System.out.print("Ingrese la cantidad: ");
+                            cant= scanner.nextInt();
+                            U= login.usuarioActual;
+                            ca= Categorias.teclado.toString();
+                            ingreso= new Producto(U,ca , 0, art, price, cant);
                             api.ingresarProducto(ingreso);
                             break;
                         default:
