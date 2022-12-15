@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  */
 public class ProductoAPI {
     private CallRest rest;
-    private String Url= "http://DESKTOP-TPILMOU:8080/webresources/producto";
+    private String Url= "http://DESKTOP-TPILMOU:8080/webresources/productos";
     
     public ProductoAPI(){
         rest= new CallRest();

@@ -11,25 +11,28 @@ package Pojo;
 public enum Categorias {
     tarjMad("Tarjeta Madre"),memRam("Memoria RAM"),moni("Monitor"), fPoder("Fuente de Poder"),
     dDuro("Disco Duro"), mouse("Mouse"), teclado("teclado");
-    private String articulo;
+    private final String articulo;
     private Categorias(final String articulo){
         this.articulo= articulo;
     }
     public String getCat(){
-        if (this.equals(tarjMad)) {
-            return articulo;
-        } else if (this.equals(memRam)) {
-            return articulo;
-        } else if (this.equals(moni)) {
-            return articulo;
-        } else if (this.equals(fPoder)) {
-            return articulo;
-        } else if (this.equals(dDuro)) {
-            return articulo;
-        }else if (this.equals(mouse)) {
-            return articulo;
-        }else if (this.equals(teclado)) {
-            return articulo;
+        switch (this) {
+            case tarjMad:
+                return articulo;
+            case memRam:
+                return articulo;
+            case moni:
+                return articulo;
+            case fPoder:
+                return articulo;
+            case dDuro:
+                return articulo;
+            case mouse:
+                return articulo;
+            case teclado:
+                return articulo;
+            default:
+                break;
         }
     return articulo;
     }

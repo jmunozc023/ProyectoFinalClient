@@ -17,6 +17,8 @@ public class login {
     private Scanner scanner = new Scanner(System.in);
     private Scanner scanner1 = new Scanner(System.in);
     public UsuarioAPI api = new UsuarioAPI();
+    public static String usuarioActual;
+    facturacion fact= new facturacion();
 
     public login() {
     }
@@ -50,6 +52,8 @@ public class login {
         String pass = scanner.next();
         var registro = new Usuario(0, user, pass);
         api.registrarUsuario(registro);
+        usuarioActual= user;
+        fact.facmenu();
         return null;
     }
     public login comprobacion() {
@@ -60,6 +64,8 @@ public class login {
         var comp= api.getUsuario(user, pass);
         if (comp.contains(user)&& comp.contains(pass)) {
             System.out.println("Autenticado");
+            usuarioActual= user;
+            fact.facmenu();
         } else {
             System.out.println("Usuario o contraseña incorrecto");
         }

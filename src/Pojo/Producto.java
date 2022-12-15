@@ -12,7 +12,7 @@ public class Producto extends productoBase{
     private String nombreUsuario;
     private String categoria;
 
-    public Producto() {
+    public Producto(String usuarioActual, Categorias tarjMad, int par, String art, int option1, int option11) {
     }
 
     public Producto(String nombreUsuario, String categoria, int id, String articulo, int costoUnitario, int cantidad) {
