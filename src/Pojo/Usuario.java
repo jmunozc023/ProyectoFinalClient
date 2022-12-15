@@ -8,41 +8,44 @@ package Pojo;
  *
  * @author josep
  */
-public class Usuario {
-    private int id;
-    private String nombreUsuario;
-    private String password;
-
+public class Usuario extends UsuarioBase{
+    
     public Usuario() {
     }
 
     public Usuario(int id, String nombreUsuario, String password) {
-        this.id = id;
-        this.nombreUsuario = nombreUsuario;
-        this.password = password;
+        super(id, nombreUsuario, password);
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombreUsuario() {
-        return nombreUsuario;
-    }
-
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
+    @Override
     public void setPassword(String password) {
-        this.password = password;
+        super.setPassword(password); 
     }
+
+    @Override
+    public String getPassword() {
+        return super.getPassword(); 
+    }
+
+    @Override
+    public void setNombreUsuario(String nombreUsuario) {
+        super.setNombreUsuario(nombreUsuario); 
+    }
+
+    @Override
+    public String getNombreUsuario() {
+        return super.getNombreUsuario(); 
+    }
+
+    @Override
+    public void setId(int id) {
+        super.setId(id); 
+    }
+
+    @Override
+    public int getId() {
+        return super.getId(); 
+    }
+    
+    
 }

@@ -23,7 +23,8 @@ public class UsuarioAPI {
     }
     public String getUsuario(String nombreUsuario, String password){
         try {
-            var resultado= rest.get(Url+"?u=" + nombreUsuario + "&p=" + password);
+            var result= rest.get(Url+"?u=" + nombreUsuario + "&p=" + password);
+            return result;
         } catch (IOException ex) {
             Logger.getLogger(UsuarioAPI.class.getName()).log(Level.SEVERE, null, ex);
         }

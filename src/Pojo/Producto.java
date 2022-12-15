@@ -8,22 +8,17 @@ package Pojo;
  *
  * @author josep
  */
-public class Producto {
-    private int id;
+public class Producto extends productoBase{
     private String nombreUsuario;
-    private String articulo;
-    private int costoUnitario;
-    private int cantidad;
+    private String categoria;
 
     public Producto() {
     }
 
-    public Producto(int id, String nombreUsuario, String articulo, int costoUnitario, int cantidad) {
-        this.id = id;
+    public Producto(String nombreUsuario, String categoria, int id, String articulo, int costoUnitario, int cantidad) {
+        super(id, articulo, costoUnitario, cantidad);
         this.nombreUsuario = nombreUsuario;
-        this.articulo = articulo;
-        this.costoUnitario = costoUnitario;
-        this.cantidad = cantidad;
+        this.categoria = categoria;
     }
 
     public String getNombreUsuario() {
@@ -34,36 +29,52 @@ public class Producto {
         this.nombreUsuario = nombreUsuario;
     }
 
-    public int getId() {
-        return id;
+    public String getCategoria() {
+        return categoria;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
-    public String getArticulo() {
-        return articulo;
-    }
-
-    public void setArticulo(String articulo) {
-        this.articulo = articulo;
-    }
-
-    public int getCostoUnitario() {
-        return costoUnitario;
-    }
-
-    public void setCostoUnitario(int costoUnitario) {
-        this.costoUnitario = costoUnitario;
-    }
-
-    public int getCantidad() {
-        return cantidad;
-    }
-
+    @Override
     public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+        super.setCantidad(cantidad); 
+    }
+
+    @Override
+    public int getCantidad() {
+        return super.getCantidad(); 
+    }
+
+    @Override
+    public void setCostoUnitario(int costoUnitario) {
+        super.setCostoUnitario(costoUnitario); 
+    }
+
+    @Override
+    public int getCostoUnitario() {
+        return super.getCostoUnitario(); 
+    }
+
+    @Override
+    public void setArticulo(String articulo) {
+        super.setArticulo(articulo); 
+    }
+
+    @Override
+    public String getArticulo() {
+        return super.getArticulo(); 
+    }
+
+    @Override
+    public void setId(int id) {
+        super.setId(id); 
+    }
+
+    @Override
+    public int getId() {
+        return super.getId(); 
     }
     
     

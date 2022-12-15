@@ -2,21 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package proyectofinalclient;
+package Pojo;
 
 /**
  *
  * @author josep
  */
-public abstract class loginBase {
+public abstract class UsuarioBase {
     private int id;
     private String nombreUsuario;
     private String password;
 
-    public loginBase() {
+    public UsuarioBase() {
     }
 
-    public loginBase(int id, String nombreUsuario, String password) {
+    public UsuarioBase(int id, String nombreUsuario, String password) {
         this.id = id;
         this.nombreUsuario = nombreUsuario;
         this.password = password;
@@ -45,5 +45,7 @@ public abstract class loginBase {
     public void setPassword(String password) {
         this.password = password;
     }
-
+    
+    
+    
 }

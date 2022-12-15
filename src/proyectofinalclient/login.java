@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author josep
  */
-public class login extends loginBase {
+public class login {
 
     private Scanner scanner = new Scanner(System.in);
     private Scanner scanner1 = new Scanner(System.in);
@@ -20,11 +20,6 @@ public class login extends loginBase {
 
     public login() {
     }
-
-    public login(int id, String nombreUsuario, String password) {
-        super(id, nombreUsuario, password);
-    }
-
     public void logmenu() {
         
         var option=0;
@@ -55,7 +50,6 @@ public class login extends loginBase {
         String pass = scanner.next();
         var registro = new Usuario(0, user, pass);
         api.registrarUsuario(registro);
-        System.out.println(api.getUsuario(user, pass));
         return null;
     }
     public login comprobacion() {
@@ -63,7 +57,6 @@ public class login extends loginBase {
         String user = scanner.next();
         System.out.println("Ingrese el password");
         String pass = scanner.next();
-        System.out.println(api.getUsuario(user, pass));
         var comp= api.getUsuario(user, pass);
         if (comp.contains(user)&& comp.contains(pass)) {
             System.out.println("Autenticado");
