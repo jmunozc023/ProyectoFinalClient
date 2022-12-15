@@ -139,7 +139,7 @@ public class facturacion {
                             api.ingresarProducto(ingreso);
                             break;
                     }
-                case 2:
+                case 2: //Menu de facturacion
                     System.out.println("************* Menu de facturacion**************");
                     System.out.println("*            Seleccione una opcion            *");
                     System.out.println("* 1. Facturar                                 *");
