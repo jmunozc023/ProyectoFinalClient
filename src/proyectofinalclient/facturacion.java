@@ -15,6 +15,7 @@ import java.util.Scanner;
  * @author josep
  */
 public class facturacion {
+
     //Declaracion de variables Scanner y constructor del API
     private Scanner scanner = new Scanner(System.in);
     private Scanner scanner1 = new Scanner(System.in);
@@ -149,12 +150,30 @@ public class facturacion {
                     option1 = scanner1.nextInt();
                     switch (option1) {
                         case 1:
+                            var U = login.usuarioActual;
+                            var acc = 0;
+                            var fact = api.getProductoList(U);
+                            /*                           if (fact.contains(U)) {
+                            for (var l : ProductoAPI.facturaList) {
+                            System.out.println(l);
+                            }
+                            for (var tot : ProductoAPI.facturaList) {
+                            int sub = tot.getCantidad() * tot.getCostoUnitario();
+                            acc= acc+ sub;
+                            System.out.println(acc);
+                            }
+                            
+                            } else {
+                                System.out.println("Usuario incorrecto");
+                            }*/
+                            
 
                             break;
-                        
+
                     }
                     break;
             }
         }
     }
+
 }
